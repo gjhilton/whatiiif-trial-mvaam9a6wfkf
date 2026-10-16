@@ -1,0 +1,38 @@
+# Everything here is optional. Delete any line you don't need.
+# Commit ONE picture (TIFF, PNG, JPEG, WebP, AVIF or GIF) next to this file and push; the site builds itself.
+# Or let your site's settings helper write this file for you: https://YOU.github.io/YOUR-REPOSITORY/settings.html
+
+# language = "en"               # the language your texts are in: en, cy, de-CH ...
+# title = "My image"            # defaults to the image file name
+# summary = "One line shown under the title."
+# creator = "Who made it"
+# date = "When it was made, e.g. about 1890"
+# attribution = "Credit line, e.g. Example Museum"
+# alt = "What the picture shows, for people who cannot see it"   # defaults to the title
+# rights = "https://creativecommons.org/licenses/by/4.0/"   # a Creative Commons or RightsStatements.org URL
+# dimensions = "120 x 80 cm"    # the original's width x height, in mm, cm, m or in: gives a scale bar
+# picture = "https://github.com/you/your-image/releases/download/picture/scan.tif"   # a picture too big to upload, by its link
+# viewer = "openseadragon"      # or "mirador"; visitors can switch on the page
+# base_url = "https://my-domain.example"   # only for a custom domain
+
+# Any text can also be given in several languages; visitors see theirs where you have given it:
+# title = { en = "Harbour", cy = "Harbwr" }
+
+# [[metadata]]                  # repeat this block for each extra field
+# label = "Medium"
+# value = "Oil on canvas"
+
+# [tiles]
+# size = 512                    # tile edge in pixels, 64 to 4096
+# quality = 85                  # JPEG quality, 1-100
+
+# [publish]
+# full = true                   # false = no full-size JPEG download (saves site space)
+# original = true               # false = no link to download the picture as you committed it
+# footer = true                 # false = no "Published with WhatIIIF" line at the foot of the page
+
+# [colours]                     # your own, in place of black on white (and white on black in dark mode)
+# paper = "#fdf6e3"             # the background
+# ink = "#222222"               # text, lines, and the button that is selected
+# viewer = "#fdf6e3"            # behind the picture
+# error = "#cc0000"             # messages about something that went wrong

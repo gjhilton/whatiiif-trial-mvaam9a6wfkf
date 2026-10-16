@@ -1,0 +1,25 @@
+# Builds the site from content/ and publishes it to GitHub Pages. The steps are kept in the WhatIIIF repository
+# (publish.yml there) and improve without this file changing; this file says only when to run them.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+    paths: ['content/**', 'engine/**', 'package*.json', '.github/workflows/deploy.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time. A newer commit waits for the one being published rather than cancelling it: a
+# deployment cancelled part-way can leave GitHub Pages refusing that commit afterwards.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    uses: gjhilton/WhatIIIF/.github/workflows/publish.yml@v1
+    secrets: inherit

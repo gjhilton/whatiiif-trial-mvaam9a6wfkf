@@ -1,0 +1,18 @@
+# Opens a pull request when a newer version of WhatIIIF is released. The steps are kept in the WhatIIIF repository
+# (offer-update.yml there); this file says only when to run them.
+# Needs Settings > Actions > General > "Allow GitHub Actions to create and approve pull requests".
+name: Update
+
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    uses: gjhilton/WhatIIIF/.github/workflows/offer-update.yml@v1
+    secrets: inherit
